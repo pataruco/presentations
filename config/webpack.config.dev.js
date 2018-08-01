@@ -36,5 +36,10 @@ module.exports = {
   output: {
     filename: 'main.js',
     path: path.resolve(__dirname, '../dist')
+  },
+  serve: {
+    contentBase: path.resolve(__dirname, '../dist'),
+    port: 3000,
+    publicPath: 'http://localhost:3000/dist/'
   }
 };
