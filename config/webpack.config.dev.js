@@ -1,14 +1,10 @@
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 
 module.exports = {
   mode: 'development',
   entry: './src/index.js',
-  output: {
-    filename: 'main.js',
-    path: path.resolve(__dirname, '../dist'),
-    publicPath: '/dist/'
-  },
   module: {
     rules: [
       {
@@ -28,6 +24,22 @@ module.exports = {
     ]
   },
   plugins: [
-    new MiniCssExtractPlugin({ filename: '[name]-[contenthash:8].css' })
-  ]
+    new MiniCssExtractPlugin({
+      filename: '[name].css',
+      chunkFilename: '[name].css',
+      path: path.resolve(__dirname, 'dist')
+    }),
+    new HtmlWebpackPlugin({
+      // cache: false,
+      // hash: false,
+      // minify: false,
+      // production: false,
+      template: './public/template.html',
+      title: 'Presentation'
+    })
+  ],
+  output: {
+    filename: 'main.js',
+    path: path.resolve(__dirname, '../dist')
+  }
 };
