@@ -1,0 +1,20 @@
+{
+  "name": "presentations",
+  "version": "1.0.0",
+  "repository": "https://github.com/pataruco/presentations.git",
+  "author": "Pedro Martin <pataruco@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-preset-env": "^1.7.0",
+    "css-loader": "^1.0.0",
+    "mini-css-extract-plugin": "^0.4.1",
+    "webpack": "^4.16.3",
+    "webpack-cli": "^3.1.0"
+  },
+  "scripts": {
+    "start": "webpack --config ./config/webpack.config.dev.js --mode development"
+  }
+}
