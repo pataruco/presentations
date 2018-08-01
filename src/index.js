@@ -2,6 +2,10 @@ import 'normalize.css';
 import '../lib/remark';
 import './main.css';
 
+const lessons = {
+  flexbox: '../slides/flexbox/flexbox.md',
+};
+
 remark.create({
   count: false,
   highlightLines: true,
@@ -13,6 +17,6 @@ remark.create({
     click: false,
   },
   ratio: '16:9',
-  sourceUrl: '../slides/flexbox/flexbox.md',
+  sourceUrl: lessons.flexbox,
   slideNumberFormat: '',
 });
