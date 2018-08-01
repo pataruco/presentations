@@ -30,7 +30,7 @@ module.exports = {
       path: path.resolve(__dirname, 'dist')
     }),
     new HtmlWebpackPlugin({
-      template: './public/template.html'
+      template: './src/template.html'
     })
   ],
   output: {
