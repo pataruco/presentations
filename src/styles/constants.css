@@ -1,0 +1,13 @@
+:root {
+  /* Fonts */
+  --serif: 'Sentinel-Black', serif;
+  --sans-serif: 'ProximaNova-Light', sans-serif;
+
+  /* Colours */
+  --red: rgb(252, 29, 66);
+  --white: rgb(248, 248, 248);
+  --black: rgb(33, 33, 33);
+  --background: rgb(248, 248, 248);
+  --shade-white: rgb(204, 204, 204);
+  --shade-black: rgb(86, 86, 86);
+}

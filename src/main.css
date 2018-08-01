@@ -1,5 +1,4 @@
-@import './styles/hello.css';
-
-body {
-  background: green;
-}
+@import './styles/normalize.css';
+@import './styles/constants.css';
+@import './styles/global.css';
+@import './styles/slides.css';
