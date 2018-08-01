@@ -94,7 +94,18 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\nvar h1 = function h1() {\n  var h1 = document.createElement('h1');\n  h1.innerText = 'Pedro';\n  return h1;\n};\n\ndocument.body.appendChild(h1());\n\n//# sourceURL=webpack:///./src/index.js?");
+eval("\n\n__webpack_require__(/*! ./main.css */ \"./src/main.css\");\n\nvar h1 = function h1() {\n  var h1 = document.createElement('h1');\n  h1.innerText = 'Pedro';\n  return h1;\n};\n\ndocument.body.appendChild(h1());\n\n//# sourceURL=webpack:///./src/index.js?");
+
+/***/ }),
+
+/***/ "./src/main.css":
+/*!**********************!*\
+  !*** ./src/main.css ***!
+  \**********************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/main.css?");
 
 /***/ })
 
