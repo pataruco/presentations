@@ -13,33 +13,33 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           options: {
-            presets: ['@babel/preset-env']
-          }
-        }
+            presets: ['@babel/preset-env'],
+          },
+        },
       },
       {
         test: /\.css$/,
-        use: [MiniCssExtractPlugin.loader, 'css-loader']
-      }
-    ]
+        use: [MiniCssExtractPlugin.loader, 'css-loader'],
+      },
+    ],
   },
   plugins: [
     new MiniCssExtractPlugin({
       filename: '[name].css',
       chunkFilename: '[name].css',
-      path: path.resolve(__dirname, 'dist')
+      path: path.resolve(__dirname, 'dist'),
     }),
     new HtmlWebpackPlugin({
-      template: './src/template.html'
-    })
+      template: './src/template.html',
+    }),
   ],
   output: {
     filename: 'main.js',
-    path: path.resolve(__dirname, '../dist')
+    path: path.resolve(__dirname, '../dist'),
   },
   serve: {
     contentBase: path.resolve(__dirname, '../dist'),
     port: 3000,
-    publicPath: 'http://localhost:3000/dist/'
-  }
+    publicPath: 'http://localhost:3000/dist/',
+  },
 };

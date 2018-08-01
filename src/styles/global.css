@@ -1,0 +1,32 @@
+:global * {
+  box-sizing: border-box;
+}
+
+:global html {
+  font-size: 62.5%;
+  overflow-y: scroll;
+  text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--sans-serif);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: var(--serif);
+}
+
+a {
+  color: var(--red);
+  text-decoration: underline;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
