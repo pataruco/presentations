@@ -30,12 +30,7 @@ module.exports = {
       path: path.resolve(__dirname, 'dist')
     }),
     new HtmlWebpackPlugin({
-      // cache: false,
-      // hash: false,
-      // minify: false,
-      // production: false,
-      template: './public/template.html',
-      title: 'Presentation'
+      template: './public/template.html'
     })
   ],
   output: {
