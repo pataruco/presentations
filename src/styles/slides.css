@@ -1,9 +1,20 @@
-.remark-container {
-  background: var(--background);
-}
-
 .logo {
   display: block;
   max-width: 75%;
   margin: 0 auto;
+}
+
+.remark-container {
+  background: var(--background);
+}
+
+.remark-slide,
+.remark-slide-content {
+  align-items: stretch;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 100%;
+  table-layout: unset;
+  width: 100%;
 }
