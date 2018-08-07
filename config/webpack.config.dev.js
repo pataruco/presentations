@@ -39,6 +39,8 @@ module.exports = {
   },
   serve: {
     contentBase: path.resolve(__dirname, '../dist'),
+    hmr: true,
+    open: true,
     port: 3000,
     publicPath: 'http://localhost:3000/dist/',
   },
