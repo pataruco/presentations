@@ -1,311 +1,399 @@
+class: center, middle
+
+# .center[Lunch & Learn]
+
+## .center[Flexbox]
+
 .logo[![](../../assets/sally.svg)]
 
-# SVG
+---
 
-### Pedro Martin
+# Agenda
+
+- **Introduction**
+  - What is not
+  - What is it?
+  - Why we should use it?
+- **Explanation**
+  - Core concepts
+  - How it works
+    - Main & cross axes
+    - Flex container and flex items
+  - Flex container
+  - Flex items
+- **Next steps**
 
 ---
 
-## SVG
+# What is not?
 
-Objective
-
-- Foundations of SVG
-
----
-
-## SVG
-
-**S**calable **V**ector **G**raphics (SVG) is an XML-based markup language for describing two dimensional based vector graphics.
-
-SVG is essentially to graphics what HTML is to text.
+- CSS property
+- Box sizing
+- Another kind of grid
 
 ---
 
-## Basic ingredients
+# What it is ?
 
-HTML provides elements for defining headers, paragraphs, and so on. In much the same way SVG provides elements for circles, rectangles, and simple and complex curves.
+Officialy it's name is
+
+### [CSS Flexible Box Layout Module](https://www.w3.org/TR/css-flexbox-1/)
+
+_"...In the flex layout model, the children of a flex container can be laid out in any direction, and can “flex” their sizes, either growing to fill unused space or shrinking to avoid overflowing the parent."_
+
+From W3C Candidate Recommendation, 19 October 2017
 
 ---
 
-## Basic ingredients
+# What it is ?
 
-A simple SVG document consists of nothing more than the `<svg>` root element and several basic shapes that build a graphic together. In addition there is the `<g>` element, which is used to group several basic shapes together.
+Is as a **one-dimensional layout model**, and as a method that could offer space distribution between items in an interface and powerful alignment capabilities.
+
+When we describe flexbox as being one dimensional we are describing the fact that flexbox deals with layout in one dimension at a time (row or column). This can be contrasted with the **two-dimensional model** of _CSS Grid Layout_, which controls columns and rows together.
 
 ---
 
-## A simple Example
+# Why we should use it?
 
-```html
-<svg version="1.1"
-     baseProfile="full"
-     width="300" height="200"
-     xmlns="http://www.w3.org/2000/svg">
+![](../../assets/flexbox/flexbox-support.png)
 
-  <rect width="100%" height="100%" fill="red" />
+---
 
-  <circle cx="150" cy="100" r="80" fill="green" />
+# Why we should use it?
 
-  <text x="150" y="125" font-size="60" text-anchor="middle" fill="white">SVG</text>
+**inline-block**
 
-</svg>
+<iframe scrolling='no' title='Layout inline-block' src='//codepen.io/pataruco/embed/preview/WKyjja/?height=265&theme-id=dark&default-tab=css,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%; height: 30vh;'>See the Pen <a href='https://codepen.io/pataruco/pen/WKyjja/'>Layout inline-block</a> by Pedro Martin (<a href='https://codepen.io/pataruco'>@pataruco</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
+
+---
+
+# Why we should use it?
+
+**float**
+
+<iframe scrolling='no' title='Layout float' src='//codepen.io/pataruco/embed/preview/ZjRyWO/?height=265&theme-id=dark&default-tab=css,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%; height: 30vh;'>See the Pen <a href='https://codepen.io/pataruco/pen/ZjRyWO/'>Layout float</a> by Pedro Martin (<a href='https://codepen.io/pataruco'>@pataruco</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
+
+---
+
+# Why we should use it?
+
+**Flexbox**
+
+<iframe scrolling='no' title='Layout flexbox' src='//codepen.io/pataruco/embed/preview/yqEXVe/?height=265&theme-id=dark&default-tab=css,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%; height: 30vh;'>See the Pen <a href='https://codepen.io/pataruco/pen/yqEXVe/'>Layout flexbox</a> by Pedro Martin (<a href='https://codepen.io/pataruco'>@pataruco</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
+
+---
+
+# Why we should use it?
+
+Is the default layout on native
+
+---
+
+# Why we should use it?
+
+No coming changes on the distant [future](https://www.w3.org/TR/?title=flex)
+
+---
+
+# Before we start...
+
+Let's talk about `direction` & `align`
+
+<iframe scrolling='no' title='Flexbox core concept' src='//codepen.io/pataruco/embed/preview/pZZmNK/?height=265&theme-id=dark&default-tab=html,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;height: 30vh;'>See the Pen <a href='https://codepen.io/pataruco/pen/pZZmNK/'>Flexbox core concept</a> by Pedro Martin (<a href='https://codepen.io/pataruco'>@pataruco</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
+
+---
+
+# How it works?
+
+<iframe  scrolling='no' title='Flexbox 1st example' src='//codepen.io/pataruco/embed/preview/VBBOEm/?height=265&theme-id=dark&default-tab=css,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%; height: 30vh;'>See the Pen <a href='https://codepen.io/pataruco/pen/VBBOEm/'>Flexbox 1st example</a> by Pedro Martin (<a href='https://codepen.io/pataruco'>@pataruco</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
+
+---
+
+class: center, middle
+
+# How it works?
+
+```css
+display: flex;
 ```
 
----
-
-## A simple example
-
-1.  We start with the svg root element.
-2.  The background is set to red by drawing a rectangle `<rect/>` that covers the complete image area.
-3.  A green circle `<circle/>` with a radius of 80px is drawn atop the center of the red rectangle (center of circle offset 150px to the right, and 100px downward from the top left corner).
-4.  The text "SVG" is drawn. The interior of each letter is filled in with white. The text is positioned by setting an anchor at where we want the midpoint to be.
+.img-center[![](../../assets/flexbox/axes.svg)]
 
 ---
 
-## How to render it
+# Flex container
 
-SVG files on the web can be displayed directly in the browser or embedded in HTML files via several methods:
+An area of a document laid out using flexbox is called a **flex container**. To create a flex container, we set the value of the area's container's display property to flex.
 
-- If the HTML is HTML5, and the browser is a conforming HTML5 browser, the SVG can be directly embedded.
-
-- The SVG file can be referenced with an `object` element:
-
-```html
-<object data="image.svg" type="image/svg+xml" />
+```css
+display: flex;
 ```
 
+As soon as we do this the direct children of that container become **flex items**.
+
 ---
 
-## How to render it
+# Flex container
 
-- Likewise an `iframe` element can be used:
+`flex-direction`: how flex items are placed in the flex container defining the main axis and the direction
 
-```html
-<iframe src="image.svg"></iframe>
+```css
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-direction: column;
+  flex-direction: row-reverse;
+  flex-direction: column-reverse;
+}
 ```
 
-- An `img` element can be used theoretically
-
-- Finally SVG can be created dynamically with JavaScript and injected into the HTML DOM.
+**[Playground](https://codepen.io/pataruco/pen/XBPmqj)**
 
 ---
 
-## The grid
+# Flex container
 
-![](https://mdn.mozillademos.org/files/224/Canvas_default_grid.png)
+`flex-wrap`: specifies whether flex items are forced into a single line or can be wrapped onto multiple lines.
 
-SVG uses a coordinate system or grid.
-
----
-
-## The grid
-
-![](https://mdn.mozillademos.org/files/224/Canvas_default_grid.png)
-
-- That is, the top left corner of the document is considered to be the point `(0,0)`, or point of origin.
-
-- Positions are then measured in pixels from the top left corner, with the positive x direction being to the right, and the positive y direction being to the bottom.
-
-Note:
-this is the opposite of the way you're taught to graph as a kid. However, this is the same way elements in HTML are positioned (By default, LTR documents are considered not the RTL documents which position X from right-to-left
-
----
-
-## What are "pixels"?
-
-- One pixel in an SVG document maps to one pixel on the output device.
-
-- **But** SVG wouldn't have the "Scalable" in its name, if there weren't several possibilities to change this behaviour
-
-- SVG defines absolute units (ones with a dimensional identifier like `px` or `cm`) and so-called _user units_, that lack that identifier and are plain numbers.
-
----
-
-## What are "pixels"?
-
-One _user unit_ equals _one screen unit_. To explicitly change this behaviour, there are several possibilities in SVG. We start with the svg root element:
-
-```html
-<svg width="100" height="100">
+```css
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  flex-wrap: wrap-reverse;
+}
 ```
 
-The above element defines a simple SVG canvas with 100x100px. One user unit equals one screen unit.
+**[Playground](https://codepen.io/pataruco/pen/XBPmqj)**
 
 ---
 
-## What are "pixels"?
+# Flex container
 
-```html
-<svg width="200" height="200" viewBox="0 0 100 100">
+`flex-flow`: is a shorthand property for `flex-direction` and `flex-wrap` individual properties.
+
+```css
+.container {
+  display: flex;
+  /* flex-flow: <'flex-direction'> and <'flex-wrap'> */
+  flex-flow: row nowrap;
+  flex-flow: column wrap;
+  flex-flow: column-reverse wrap-reverse;
+}
 ```
 
-The whole SVG canvas here is 200px by 200px in size. However, the `viewBox` attribute defines the portion of that canvas to display.
-
-These 200x200 pixels display an area that starts at user unit (0,0) and spans 100x100 user units to the right and to the bottom.
-
-This effectively zooms in on the 100x100 unit area and enlarges the image to double size.
+**[Playground](https://codepen.io/pataruco/pen/XBPmqj)**
 
 ---
 
-## Basic shapes
+# Flex container
 
-[https://codepen.io/pataruco/pen/jxygOe](https://codepen.io/pataruco/pen/jxygOe)
+`justify-content`: defines how the browser distributes space between and around content items along the **main-axis** of their container.
 
----
-
-## Rectangles
-
-The `rect` element does exactly what you would expect and draws a rectangle on the screen.
-
-```html
-<rect x="10" y="10" width="30" height="30"/>
-<rect x="60" y="10" rx="10" ry="10" width="30" height="30"/>
+```css
+.container {
+  display: flex;
+  /* Positional alignment */
+  justify-content: center;
+  justify-content: start; /* flex-start */
+  justify-content: end; /* flex-end */
+  justify-content: left;
+  justify-content: right;
+  /* Distributed alignment */
+  justify-content: space-between;
+  justify-content: space-around;
+  justify-content: space-evenly;
+  justify-content: stretch;
+}
 ```
 
----
-
-## Rectangles
-
-- `x`: The x position of the top left corner of the rectangle.
-- `y`: The y position of the top left corner of the rectangle.
-- `width`: The width of the rectangle
-- `height`: The height of the rectangle
-- `rx`: The x radius of the corners of the rectangle
-- `ry`: The y radius of the corners of the rectangle
+**[Playground](https://codepen.io/pataruco/pen/XBPmqj)**
 
 ---
 
-## Circle
+# Flex container
 
-The `circle` element draws a circle on the screen.
+`align-items`: sets the `align-self` (flex item property) value on all direct children as a group. It controls the alignment of items on the **cross axis**
 
-There are really only 3 attributes that are applicable here.
-
-```html
-<circle cx="25" cy="75" r="20"/>
+```css
+.container {
+  display: flex;
+  /* Basic keywords */
+  align-items: normal;
+  align-items: stretch;
+  /* Positional alignment */
+  align-items: center;
+  align-items: start; /* flex-start */
+  align-items: end; /* flex-end */
+  align-items: baseline;
+}
 ```
 
-- `r`: The radius of the circle.
-- `cx`: The x position of the center of the circle.
-- `cy`: The y position of the center of the circle.
+**[Playground](https://codepen.io/pataruco/pen/XBPmqj)**
 
 ---
 
-## Ellipse
+# Flex container
 
-Ellipses are actually just a more general form of the circle element, where you can scale the x and y radius of the circle separately.
+`align-content`: handles the remaining space between and around content items along the **cross-axis** with multiple lines.
 
-```html
-<ellipse cx="75" cy="75" rx="20" ry="5"/>
+```css
+.container {
+  display: flex;
+  /* Basic keywords */
+  align-content: center;
+  align-content: start; /* flex-start */
+  align-content: end; /* flex-end */
+  /* Baseline alignment */
+  align-content: baseline;
+  /* Distributed alignment */
+  align-content: space-between;
+  align-content: space-around;
+  align-content: space-evenly;
+  align-content: stretch;
+}
 ```
 
-- `rx`: The x radius of the ellipse.
-- `ry`: The y radius of the ellipse.
-- `cx`: The x position of the center of the ellipse.
-- `cy`: The y position of the center of the ellipse.
+**[Playground](https://codepen.io/pataruco/pen/XBPmqj)**
 
 ---
 
-## Line
+# Flex items
 
-Lines are again, just straight lines.
+To have more control over flex items we can target them directly. We do this by way of three properties
 
-They take as attributes two points which specify the start and end point of the line.
+- `flex-grow`
+- `flex-shrink`
+- `flex-basis`
+- `flex`
+- `align-self`
+- `order`
 
-```html
-<line x1="10" x2="50" y1="110" y2="150"/>
+---
+
+# Flex items
+
+`flex-grow`: specifies what amount of space inside the flex container the item should take up. The flex grow factor of a flex item is relative to the size of the other children in the flex-container.
+
+```css
+.container {
+  display: flex;
+}
+
+.item {
+  flex-grow: 1;
+}
 ```
 
-- `x1`: The x position of point 1.
-- `y1`: The y position of point 1.
-- `x2`: The x position of point 2.
-- `y2`: The y position of point 2.
+**[Playground 2](https://codepen.io/pataruco/pen/BPbYPe)**
 
 ---
 
-## Polyline
+# Flex items
 
-Polylines are groups of connected straight lines. Since that list can get quite long, all the points are included in one attribute:
+`flex-shrink`: flex items will shrink to fill the container according to the flex-shrink number, when the default size of flex items is larger than the flex container.
 
-```html
-<polyline points="60 110, 65 120, 70 115, 75 130, 80 125, 85 140, 90 135, 95 150, 100 145"/>
+```css
+.container {
+  display: flex;
+}
+
+.item {
+  flex-shrink: 1;
+}
 ```
 
-- `points`: A list of points, each number separated by a space, comma, EOL, or a line feed character. Each point must contain two numbers, an x coordinate and a y coordinate.
+**[Playground 2](https://codepen.io/pataruco/pen/BPbYPe)**
 
 ---
 
-## Polygon
+# Flex items
 
-Polygons are a lot like polylines in that they're composed of straight line segments connecting a list of points. For polygons though, the path automatically returns to the first point for you at the end, creating a closed shape.
+`flex-basis`: specifies the initial main size of a flex item. This property determines the size of the content-box
 
-```html
-<polygon points="50 160, 55 180, 70 180, 60 190, 65 205, 50 195, 35 205, 40 190, 30 180, 45 180"/>
+```css
+.container {
+  display: flex;
+}
+
+.item {
+  flex-basis: 33%;
+}
 ```
 
+**[Playground 2](https://codepen.io/pataruco/pen/BPbYPe)**
+
 ---
 
-## Path
+# Flex items
 
-Path is probably the most general shape that can be used in SVG. Using a path element you can draw rectangles, circles, ellipses, polylines, and polygons. Basically any of the other types of shapes, bezier curves, quadratic curves, and many more.
+`flex`: is a shorthand property that sets `flex-grow`, `flex-shrink`, and `flex-basis`.
 
-```html
-<path d="M 20 230 Q 40 205, 50 230 T 90230"/>
+```css
+.container {
+  display: flex;
+}
+
+.item {
+  flex: 1 1 25%;
+}
 ```
 
-`d`: a list of points and other information about how to draw the path. See the Paths section for more information.
-
-More info in how to draw paths [here](https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Paths)
+**[Playground 2](https://codepen.io/pataruco/pen/BPbYPe)**
 
 ---
 
-## Fills and Strokes
+# Flex items
 
-Basic coloring can be done by setting two attributes on the node: `fill` and `stroke`. Fill sets the color inside the object and stroke sets the color of the line drawn around the object
+`align-self`: aligns flex items of the current flex line overriding the align-items value. If any of the item's cross-axis margin is set to auto, then align-self is ignored.
 
-```html
-<rect x="10" y="10" width="100" height="100" stroke="blue" fill="purple"
-       fill-opacity="0.5" stroke-opacity="0.8"/>
+```css
+.container {
+  display: flex;
+}
+
+.item {
+  align-self: center; /* Put the item around the center */
+  align-self: flex-start; /* Put the flex item at the start */
+  align-self: flex-end; /* Put the flex item at the end */
+}
 ```
 
----
-
-## Stroke
-
-![](https://mdn.mozillademos.org/files/730/SVG_Stroke_Linecap_Example.png)
-[https://codepen.io/pataruco/pen/ELZqwK](https://codepen.io/pataruco/pen/ELZqwK)
+**[Playground 2](https://codepen.io/pataruco/pen/BPbYPe)**
 
 ---
 
-## Stroke
+# Flex items
 
-There are three possible values for `stroke-linecap`:
+`order`: specifies the order used to lay out a flex or grid item in its flex container. Items within the same container are laid out in ascending order according to their order values. Elements with the same order value are laid out in the order in which they appear in the source code.
 
-- `butt` closes the line off with a straight edge that's normal (at 90 degrees) to the direction of the stroke and crosses its end.
+```css
+.container {
+  display: flex;
+}
 
-- `square` has essentially the same appearance, but stretches the stroke slightly beyond the actual path. The distance that the stroke goes beyond the path is half the stroke-width.
+.item {
+  order: 1;
+  order: -1;
+}
+```
 
-- `round` produces a rounded effect on the end of the stroke. The radius of this curve is also controlled by the stroke-width.
-
----
-
-## Stroke-linejoin
-
-![](https://mdn.mozillademos.org/files/731/SVG_Stroke_Linejoin_Example.png)
-[https://codepen.io/pataruco/pen/bMgXKz](https://codepen.io/pataruco/pen/bMgXKz)
-
----
-
-## Stroke-dasharray
-
-![](https://mdn.mozillademos.org/files/729/SVG_Stroke_Dasharray_Example.png)
+**[Playground 2](https://codepen.io/pataruco/pen/BPbYPe)**
 
 ---
 
-## All together
+class: center, middle
 
-### Loading spinner
-
-[https://codepen.io/pataruco/pen/jxygQg](https://codepen.io/pataruco/pen/jxygQg)
+![](https://media.giphy.com/media/l2YWxUulKOk8EM4gg/giphy.gif)
 
 ---
+
+# Next steps
+
+- Do [Flex Froggy](https://flexboxfroggy.com/)
+- Implement [LostGrid](http://lostgrid.org/) which is a PostCSS Grid Framework
