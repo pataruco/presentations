@@ -21,11 +21,7 @@ class: center, middle
     - Flex container and flex items
   - Flex container
   - Flex items
-- **Wrapping**
-  - Grid vs flex | Flex with grid
-  - Native style
-  - No new recomendations on the pipeline
-  - Next steps
+- **Next steps**
 
 ---
 
@@ -87,6 +83,18 @@ When we describe flexbox as being one dimensional we are describing the fact tha
 
 <iframe scrolling='no' title='Layout flexbox' src='//codepen.io/pataruco/embed/preview/yqEXVe/?height=265&theme-id=dark&default-tab=css,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%; height: 30vh;'>See the Pen <a href='https://codepen.io/pataruco/pen/yqEXVe/'>Layout flexbox</a> by Pedro Martin (<a href='https://codepen.io/pataruco'>@pataruco</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
+
+---
+
+# Why we should use it?
+
+Is the default layout on native
+
+---
+
+# Why we should use it?
+
+No coming changes on the distant [future](https://www.w3.org/TR/?title=flex)
 
 ---
 
@@ -265,3 +273,127 @@ To have more control over flex items we can target them directly. We do this by 
 - `flex`
 - `align-self`
 - `order`
+
+---
+
+# Flex items
+
+`flex-grow`: specifies what amount of space inside the flex container the item should take up. The flex grow factor of a flex item is relative to the size of the other children in the flex-container.
+
+```css
+.container {
+  display: flex;
+}
+
+.item {
+  flex-grow: 1;
+}
+```
+
+**[Playground 2](https://codepen.io/pataruco/pen/BPbYPe)**
+
+---
+
+# Flex items
+
+`flex-shrink`: flex items will shrink to fill the container according to the flex-shrink number, when the default size of flex items is larger than the flex container.
+
+```css
+.container {
+  display: flex;
+}
+
+.item {
+  flex-shrink: 1;
+}
+```
+
+**[Playground 2](https://codepen.io/pataruco/pen/BPbYPe)**
+
+---
+
+# Flex items
+
+`flex-basis`: specifies the initial main size of a flex item. This property determines the size of the content-box
+
+```css
+.container {
+  display: flex;
+}
+
+.item {
+  flex-basis: 33%;
+}
+```
+
+**[Playground 2](https://codepen.io/pataruco/pen/BPbYPe)**
+
+---
+
+# Flex items
+
+`flex`: is a shorthand property that sets `flex-grow`, `flex-shrink`, and `flex-basis`.
+
+```css
+.container {
+  display: flex;
+}
+
+.item {
+  flex: 1 1 25%;
+}
+```
+
+**[Playground 2](https://codepen.io/pataruco/pen/BPbYPe)**
+
+---
+
+# Flex items
+
+`align-self`: aligns flex items of the current flex line overriding the align-items value. If any of the item's cross-axis margin is set to auto, then align-self is ignored.
+
+```css
+.container {
+  display: flex;
+}
+
+.item {
+  align-self: center; /* Put the item around the center */
+  align-self: flex-start; /* Put the flex item at the start */
+  align-self: flex-end; /* Put the flex item at the end */
+}
+```
+
+**[Playground 2](https://codepen.io/pataruco/pen/BPbYPe)**
+
+---
+
+# Flex items
+
+`order`: specifies the order used to lay out a flex or grid item in its flex container. Items within the same container are laid out in ascending order according to their order values. Elements with the same order value are laid out in the order in which they appear in the source code.
+
+```css
+.container {
+  display: flex;
+}
+
+.item {
+  order: 1;
+  order: -1;
+}
+```
+
+**[Playground 2](https://codepen.io/pataruco/pen/BPbYPe)**
+
+---
+
+class: center, middle
+
+![](https://media.giphy.com/media/l2YWxUulKOk8EM4gg/giphy.gif)
+
+---
+
+# Next steps
+
+- Do [Flex Froggy](https://flexboxfroggy.com/)
+- Implement [LostGrid](http://lostgrid.org/) which is a PostCSS Grid Framework
