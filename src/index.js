@@ -1,5 +1,5 @@
 import 'normalize.css';
-import '../lib/remark';
+import remark from 'exports-loader?remark!remark-slide/out/remark.js';
 import './main.css';
 
 const lessons = {
