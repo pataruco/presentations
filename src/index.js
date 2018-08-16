@@ -5,6 +5,7 @@ import remark from 'exports-loader?remark!remark-slide/out/remark.js';
 
 const lessons = {
   flexbox: '../slides/flexbox/flexbox.md',
+  svg: '../slides/svg/svg.md',
 };
 
 remark.create({
@@ -18,6 +19,6 @@ remark.create({
     click: false,
   },
   ratio: '16:9',
-  sourceUrl: lessons.flexbox,
+  sourceUrl: lessons.svg,
   slideNumberFormat: '',
 });
