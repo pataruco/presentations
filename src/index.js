@@ -1,6 +1,7 @@
 import 'normalize.css';
-import '../lib/remark';
 import './main.css';
+// Using export-loader to load remark downloaded from NPM
+import remark from 'exports-loader?remark!remark-slide/out/remark.js';
 
 const lessons = {
   flexbox: '../slides/flexbox/flexbox.md',
