@@ -1,5 +1,7 @@
 # Holocron
 
+![](https://media.giphy.com/media/l2JJmXRcFoEJNXyEM/giphy.gif)
+
 It's a Markdown presentation tool using the new [Webpack server](https://github.com/webpack-contrib/webpack-serve) and [remarkjs](https://github.com/gnab/remark)
 
 ## How to install?
