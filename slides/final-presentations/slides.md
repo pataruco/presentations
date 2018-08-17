@@ -1,16 +1,18 @@
-![GeneralAssemb.ly](../../img/icons/FEWD_Logo.png)
+class: center, middle
 
-# Final Presentations
+# .center[Final Presentations]
 
-### Pedro Martin
+## .center[Pedro Martin]
+
+.logo[![](../../assets/ga.svg)]
 
 ---
 
 ## Agenda
 
-* What we covered?
-* Next steps
-* Final Presentations showcase
+- What we covered?
+- Next steps
+- Final Presentations showcase
 
 ---
 
@@ -58,8 +60,8 @@ This is a good way to keep your skills ready and up to date.
 
 Go to a Web template library and build an static website
 
-* [Themeforest](https://themeforest.net/free/wordpress-themes)
-* [Boostrap Templates](https://startbootstrap.com/)
+- [Themeforest](https://themeforest.net/free/wordpress-themes)
+- [Boostrap Templates](https://startbootstrap.com/)
 
 ---
 
@@ -67,10 +69,10 @@ Go to a Web template library and build an static website
 
 Learn a front end library
 
-* [Bootstrap](https://getbootstrap.com/)
-* [Bulma](https://bulma.io/)
-* [Materialize](https://materializecss.com/)
-* [Foundation](https://foundation.zurb.com/)
+- [Bootstrap](https://getbootstrap.com/)
+- [Bulma](https://bulma.io/)
+- [Materialize](https://materializecss.com/)
+- [Foundation](https://foundation.zurb.com/)
 
 ---
 
@@ -78,10 +80,10 @@ Learn a front end library
 
 Do code free courses
 
-* [Free Code Camp](https://www.freecodecamp.org/)
-* [EdX](https://www.edx.org/course/?subject=Computer%20Science&language=English&level=Introductory)
-* [Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/Learn)
-* [Coursera](https://www.coursera.org/courses?languages=en&query=full+stack+web+development&userQuery=web+development)
+- [Free Code Camp](https://www.freecodecamp.org/)
+- [EdX](https://www.edx.org/course/?subject=Computer%20Science&language=English&level=Introductory)
+- [Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/Learn)
+- [Coursera](https://www.coursera.org/courses?languages=en&query=full+stack+web+development&userQuery=web+development)
 
 ---
 
@@ -98,12 +100,12 @@ and it's [very well](https://insights.stackoverflow.com/survey/2018/#top-paying-
 
 Read and follow front end blogs... even if you don't understand it... yet
 
-* [Alligator](https://alligator.io)
-* [Smashing Magazine](https://www.smashingmagazine.com)
-* [Codrops](https://tympanus.net/codrops/)
-* [CSS Wizardry](https://csswizardry.com/)
-* [CSS tricks](https://css-tricks.com/)
-* [Lea Verou](http://lea.verou.me/)
+- [Alligator](https://alligator.io)
+- [Smashing Magazine](https://www.smashingmagazine.com)
+- [Codrops](https://tympanus.net/codrops/)
+- [CSS Wizardry](https://csswizardry.com/)
+- [CSS tricks](https://css-tricks.com/)
+- [Lea Verou](http://lea.verou.me/)
 
 ---
 
