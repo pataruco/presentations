@@ -92,17 +92,23 @@ SVG files on the web can be displayed directly in the browser or embedded in HTM
 
 ---
 
+class: center, middle
+
 ## The grid
 
-![](https://mdn.mozillademos.org/files/224/Canvas_default_grid.png)
+.img-center[![](https://mdn.mozillademos.org/files/224/Canvas_default_grid.png)]
 
 SVG uses a coordinate system or grid.
 
 ---
 
+class: center, middle
+
 ## The grid
 
 ![](https://mdn.mozillademos.org/files/224/Canvas_default_grid.png)
+
+.align-left[
 
 - That is, the top left corner of the document is considered to be the point `(0,0)`, or point of origin.
 
@@ -110,6 +116,7 @@ SVG uses a coordinate system or grid.
 
 Note:
 this is the opposite of the way you're taught to graph as a kid. However, this is the same way elements in HTML are positioned (By default, LTR documents are considered not the RTL documents which position X from right-to-left
+]
 
 ---
 
@@ -272,6 +279,8 @@ Basic coloring can be done by setting two attributes on the node: `fill` and `st
 
 ---
 
+class: center, middle
+
 ## Stroke
 
 ![](https://mdn.mozillademos.org/files/730/SVG_Stroke_Linecap_Example.png)
@@ -291,12 +300,17 @@ There are three possible values for `stroke-linecap`:
 
 ---
 
+class: center, middle
+
 ## Stroke-linejoin
 
 ![](https://mdn.mozillademos.org/files/731/SVG_Stroke_Linejoin_Example.png)
+
 [https://codepen.io/pataruco/pen/bMgXKz](https://codepen.io/pataruco/pen/bMgXKz)
 
 ---
+
+class: center, middle
 
 ## Stroke-dasharray
 
@@ -304,10 +318,10 @@ There are three possible values for `stroke-linecap`:
 
 ---
 
+class: center, middle
+
 ## All together
 
 ### Loading spinner
 
 [https://codepen.io/pataruco/pen/jxygQg](https://codepen.io/pataruco/pen/jxygQg)
-
----
