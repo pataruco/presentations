@@ -1,8 +1,10 @@
-![GeneralAssemb.ly](../../img/icons/FEWD_Logo.png)
+class: center, middle
 
-# Accesability
+# .center[Accesability]
 
-### Pedro Martin
+## .center[Pedro Martin]
+
+.logo[![](../../assets/ga.svg)]
 
 ---
 
@@ -22,19 +24,19 @@ _"**The Web is fundamentally designed to work for all people**, whatever their h
 
 Accessibility and the best practices it entails can benefit everyone:
 
-* Semantic HTML (which improves accessibility) also improves SEO, making your site more findable/marketable.
-* Caring about accessibility demonstrates good ethics/morals, which improves your public image.
-* Other good practices that improve accessibility also make your site more usable by other groups, such as mobile phone users, those on a low network speed, etc.
-* [EU](http://eur-lex.europa.eu/eli/dir/2016/2102/oj) and [UK Law](http://www.legislation.gov.uk/ukpga/2010/15/contents)
+- Semantic HTML (which improves accessibility) also improves SEO, making your site more findable/marketable.
+- Caring about accessibility demonstrates good ethics/morals, which improves your public image.
+- Other good practices that improve accessibility also make your site more usable by other groups, such as mobile phone users, those on a low network speed, etc.
+- [EU](http://eur-lex.europa.eu/eli/dir/2016/2102/oj) and [UK Law](http://www.legislation.gov.uk/ukpga/2010/15/contents)
 
 ---
 
 ## What kinds of disability are we looking at?
 
-* People with visual impairments
-* People with hearing impairments
-* People with mobility impairments
-* People with cognitive impairments
+- People with visual impairments
+- People with hearing impairments
+- People with mobility impairments
+- People with cognitive impairments
 
 ---
 
@@ -42,17 +44,17 @@ Accessibility and the best practices it entails can benefit everyone:
 
 A common accessibility **myth** is that accessibility is an expensive _"added extra"_ to implement on a project. This myth actually can be true if either:
 
-* You are trying to _"retrofit"_ accessibility onto an existing website that has significant accessiblity issues.
-* You have only started to consider accessibility and uncovered related issues in the late stages of a project.
+- You are trying to _"retrofit"_ accessibility onto an existing website that has significant accessiblity issues.
+- You have only started to consider accessibility and uncovered related issues in the late stages of a project.
 
 ---
 
 ## What we are covering?
 
-* HTML: A good basis for accessibility
-* CSS accessibility best practices
-* WAI-ARIA basics
-* Accessible multimedia
+- HTML: A good basis for accessibility
+- CSS accessibility best practices
+- WAI-ARIA basics
+- Accessible multimedia
 
 ---
 
@@ -102,9 +104,9 @@ Semantic HTML doesn't take longer to write than non-semantic (bad) markup if you
 
 Benefits:
 
-* **Easier to develop with**: you get some functionality for free, plus it is arguably easier to understand.
-* **Better on mobile**: semantic HTML is arguably lighter in file size than non-semantic spaghetti code, and easier to make responsive.
-* **Good for SEO**:search engines give more importance to keywords inside headings, links, etc., than keywords included in non-semantic `<div>`s, etc., so your documents will be more findable by customers.
+- **Easier to develop with**: you get some functionality for free, plus it is arguably easier to understand.
+- **Better on mobile**: semantic HTML is arguably lighter in file size than non-semantic spaghetti code, and easier to make responsive.
+- **Good for SEO**:search engines give more importance to keywords inside headings, links, etc., than keywords included in non-semantic `<div>`s, etc., so your documents will be more findable by customers.
 
 ---
 
@@ -112,8 +114,8 @@ Benefits:
 
 ### Exercise using VO utility
 
-* [Good Practice](https://mdn.github.io/learning-area/accessibility/html/good-semantics.html)
-* [Bad Practice](https://mdn.github.io/learning-area/accessibility/html/bad-semantics.html)
+- [Good Practice](https://mdn.github.io/learning-area/accessibility/html/good-semantics.html)
+- [Bad Practice](https://mdn.github.io/learning-area/accessibility/html/bad-semantics.html)
 
 ---
 
@@ -133,7 +135,7 @@ CSS when used properly, also have the potential to allow for accessible web expe
 
 ## CSS accessibility best practices
 
-* _Standard_ text content structure
+- _Standard_ text content structure
 
 ```html
 <h1>Heading</h1>
@@ -150,7 +152,7 @@ CSS when used properly, also have the potential to allow for accessible web expe
 
 ## CSS accessibility best practices
 
-* _Standard_ text content structure
+- _Standard_ text content structure
 
 ```css
 h1 {
@@ -168,7 +170,7 @@ li {
 
 ## CSS accessibility best practices
 
-* Emphasised text
+- Emphasised text
 
 ```html
 <p>The water is <em>very hot</em>.</p>
@@ -180,7 +182,7 @@ li {
 
 ## CSS accessibility best practices
 
-* Emphasised text
+- Emphasised text
 
 ```css
 strong,
@@ -193,7 +195,7 @@ em {
 
 ## CSS accessibility best practices
 
-* Links
+- Links
 
 ```html
 <p>Visit the <a href="https://www.mozilla.org">Mozilla homepage</a>.</p>
@@ -203,7 +205,7 @@ em {
 
 ## CSS accessibility best practices
 
-* Links
+- Links
 
 ```css
 a {
@@ -279,8 +281,8 @@ An important point about **WAI-ARIA** attributes is that they don't affect anyth
 
 ### WAI-ARIA basics
 
-* [Role definitions](https://www.w3.org/TR/wai-aria-1.1/#role_definitions)
-* [State and properties definitions](https://www.w3.org/TR/wai-aria-1.1/#state_prop_def)
+- [Role definitions](https://www.w3.org/TR/wai-aria-1.1/#role_definitions)
+- [State and properties definitions](https://www.w3.org/TR/wai-aria-1.1/#state_prop_def)
 
 ---
 
@@ -292,7 +294,7 @@ Another category of content that can create accessibility problems is multimedia
 
 ### Accessible multimedia
 
-* Simple images
+- Simple images
 
 ```html
  <img src="dinosaur.png"
@@ -303,7 +305,7 @@ Another category of content that can create accessibility problems is multimedia
 
 ### Accessible multimedia
 
-* Accessible audio and video controls
+- Accessible audio and video controls
 
 [Exercise](https://mdn.github.io/learning-area/accessibility/multimedia/native-controls.html)
 
@@ -311,8 +313,6 @@ Another category of content that can create accessibility problems is multimedia
 
 ### Accessible multimedia
 
-* Accessible audio and video controls
+- Accessible audio and video controls
 
 [Example](https://mdn.github.io/learning-area/accessibility/multimedia/audio-transcript-ui/)
-
----
