@@ -12,7 +12,7 @@ class: center, middle
 
 - In that year ...
 - Who are we
-- Crazy eight's
+- Crazy eight's(ish)
 - Tell the difference...
 - The 3 Layers of the Web
 - HTML
@@ -81,13 +81,13 @@ class: center, middle
 
 # Crazy Eight's
 
-Please draw 8 crazy **bad** ideas on how you want to finish this course.
+Please draw 4 crazy **bad** ideas on how you want to finish this course.
 
 ---
 
 # Crazy Eight's
 
-Please draw 8 crazy **good** ideas on how you want to finish this course.
+Please draw 4 crazy **good** ideas on how you want to finish this course.
 
 ---
 
@@ -146,8 +146,73 @@ class: center, middle
 
 # Intro to HTML
 
-`Hello there`
+`My cat is very grumpy`
 
 ```html
-<p>Hello there</p>
+<p>My cat is very grumpy</p>
 ```
+
+---
+
+# Anatomy of an HTML element
+
+![](https://mdn.mozillademos.org/files/9347/grumpy-cat-small.png)
+
+---
+
+# Nesting elements
+
+## What is the difference?
+
+```html
+<p>My cat is <strong>very</strong> grumpy.</p>
+```
+
+```html
+<p>My cat is <strong>very grumpy.</p></strong>
+```
+
+---
+
+# Nesting elements
+
+## Good:
+
+```html
+<p>My cat is <strong>very</strong> grumpy.</p>
+```
+
+## ~~Bad~~:
+
+```html
+<p>My cat is <strong>very grumpy.</p></strong>
+```
+
+---
+
+# Block versus inline elements
+
+There are two important categories of elements in HTML which you should know about. They are **block-level** elements and **inline** elements.
+
+---
+
+# Block versus inline elements
+
+## Block-level
+
+- They will appear on a new line from whatever content went before it, and any content that goes after it will also appear on a new line.
+- Tend to be structural elements on the page that represent, for example, paragraphs, lists, navigation menus, footers, etc.
+- A block-level element wouldn't be nested inside an inline element, but it might be nested inside another block-level element.
+
+```html
+<p>Paragraph</p>
+<nav>
+  <ul>
+    <li>list item</li>
+  </ul>
+</nav>
+```
+
+---
+
+Inline elements are those that are contained within block-level elements and surround only small parts of the document’s content, not entire paragraphs and groupings of content. An inline element will not cause a new line to appear in the document; they would normally appear inside a paragraph of text, for example an <a> element (hyperlink) or emphasis elements such as <em> or <strong>.
