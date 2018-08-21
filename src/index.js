@@ -4,7 +4,11 @@ import './main.css';
 import remark from 'exports-loader?remark!remark-slide/out/remark.js';
 
 const lessons = {
+  accesability: '../slides/accesability/accesability.md',
+  finalPresentations: '../slides/final-presentations/slides.md',
   flexbox: '../slides/flexbox/flexbox.md',
+  html: '../slides/intro-html/html.md',
+  svg: '../slides/svg/svg.md',
 };
 
 remark.create({
@@ -18,6 +22,6 @@ remark.create({
     click: false,
   },
   ratio: '16:9',
-  sourceUrl: lessons.flexbox,
+  sourceUrl: lessons.html,
   slideNumberFormat: '',
 });
