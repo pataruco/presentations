@@ -37,6 +37,10 @@ class: center, middle
 
 ## Pedro Martin
 
+![](https://i.guim.co.uk/img/static/sys-images/Guardian/Pix/pictures/2015/7/20/1437405084174/3e782722-ff07-4a19-8031-22a7e92c7921-2060x1373.jpeg?w=620&q=55&auto=format&usm=12&fit=max&s=17a0d724be4fbbaebcfbd02ea84aab6c)
+
+---
+
 ### Core skills
 
 - JavaScript / TypeScript
@@ -73,9 +77,10 @@ class: center, middle
 
 #### Education
 
-- _Universidad Central de Venezuela_ | **Education BSc** | 2005 - 2010
-- _Universidad Central de Venezuela_ | **Geological Engineer** | 1999 - 2001 (not completed)
 - _General Assembly_, London | **Web Development** | 2013 - 2013
+- _Universidad Central de Venezuela_ | **Education BSc** | 2005 - 2010
+- _Adventure Based Counseling_, Bogota | **Instructor** |2003
+- _Universidad Central de Venezuela_ | **Geological Engineer** | 1999 - 2001 (not completed)
 
 ---
 
@@ -198,7 +203,7 @@ There are two important categories of elements in HTML which you should know abo
 
 # Block versus inline elements
 
-## Block-level
+## Block
 
 - They will appear on a new line from whatever content went before it, and any content that goes after it will also appear on a new line.
 - Tend to be structural elements on the page that represent, for example, paragraphs, lists, navigation menus, footers, etc.
@@ -215,4 +220,167 @@ There are two important categories of elements in HTML which you should know abo
 
 ---
 
-Inline elements are those that are contained within block-level elements and surround only small parts of the document’s content, not entire paragraphs and groupings of content. An inline element will not cause a new line to appear in the document; they would normally appear inside a paragraph of text, for example an <a> element (hyperlink) or emphasis elements such as <em> or <strong>.
+# Block versus inline elements
+
+## Inline
+
+- Are contained within block-level elements and surround only small parts of the document’s content, not entire paragraphs and groupings of content.
+- Will not cause a new line to appear in the document; they would normally appear inside a paragraph of text.
+- For example an `<a>` element (hyperlink) or emphasis elements such as `<em>` or `<strong>`.
+
+```html
+<p>
+  Here is a link to <a href="www.ga.co">General Assembly</a>.
+  Here is an <em>emphasis</em>.
+  and here is a <span>common wrapper</span>
+</p>
+```
+
+---
+
+# Empty elements
+
+Are self closing elements
+
+```html
+<img src="https://api.peteroftheday.com/random" alt="A random Picture of Peter Martin"/>
+<hr/>
+<input type="color" id="color"/>
+```
+
+---
+
+# HTML text fundamentals
+
+## Headings and Paragraphs
+
+```html
+<p>I am a paragraph, oh yes I am.</p>
+<h1>I am the title of the story.</h1>
+```
+
+---
+
+# HTML text fundamentals
+
+## Implementing structural hierarchy
+
+```html
+<h1>Star Wars</h1>
+<p>By George Lucas</p>
+
+<h2>Episode IV: A New Hope</h2>
+<p>It is a period of civil war. Rebel spaceships ...</p>
+
+<h2>Episode V: The Empire Strike Back</h2>
+<p>It is a dark time for the Rebellion...</p>
+<h3>EXT. GALAXY - PLANET HOTH</h3>
+<p>A Star Destroyer moves through space, releasing Imperial probe robots
+from its underside.<p>
+```
+
+---
+
+# HTML text fundamentals
+
+## Why do we need semantics?
+
+```html
+<h1>This is a top level heading</h1>
+<span style="font-size: 32px; margin: 21px 0;">Is this a top level heading?</span>
+```
+
+---
+
+# HTML text fundamentals
+
+## Lists
+
+### Unordered
+
+```html
+<ul>
+  <li>milk</li>
+  <li>eggs</li>
+  <li>bread</li>
+  <li>hummus</li>
+</ul>
+```
+
+---
+
+# HTML text fundamentals
+
+## Lists
+
+### Ordered
+
+```html
+<ol>
+  <li>Drive to the end of the road</li>
+  <li>Turn right</li>
+  <li>Go straight across the first two roundabouts</li>
+  <li>Turn left at the third roundabout</li>
+  <li>The school is on your right, 300 meters up the road</li>
+</ol>
+```
+
+---
+
+# Code along
+
+## Press release exercise
+
+???
+Add a link
+
+---
+
+# What is the HTML head?
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>My test page</title>
+  </head>
+  <body>
+    <p>This is my page</p>
+  </body>
+</html>
+```
+
+---
+
+# What is the HTML head?
+
+## Metadata
+
+```html
+<head>
+  <meta charset="utf-8">
+  <meta name="author" content="Pedro Martin">
+  <meta name="description" content="A Lesson about HTMLs">
+</head>
+```
+
+---
+
+# Applying CSS and JavaScript to HTML
+
+```html
+<link rel="stylesheet" href="my-css-file.css">
+```
+
+```html
+<script src="my-js-file.js"></script>
+```
+
+---
+
+# Setting the primary language of the document
+
+```html
+<html lang="en-GB">
+```
