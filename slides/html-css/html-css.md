@@ -12,11 +12,158 @@ class: center, middle
 
 - Recap
 - Advanced HTML
+  - Absolute vs relative paths
+  - Images
   - Metadata
   - Applying CSS and JavaScript to HTML
   - Creating hyperlinks
   - Document and website structure
 - Intro to CSS
+  - Properties
+  - Selectors
+  - How to apply your CSS
+  - Colors
+  - Fonts
+
+---
+
+# Absolute vs relative paths
+
+We can differentiate between an **absolute** URL and a **relative** URL by looking only at the path part of the URL.
+
+```js
+'./i-am-relative-path/filename.txt';
+// From my current position get to a directory and the get the file
+```
+
+```js
+'../i-am-also-a-relative-path/filename.txt';
+// From my current position go up to my parent directory and
+//then to another directory and the get the file
+```
+
+```js
+'https://www.ga.com'; // I am an absolute path
+```
+
+---
+
+# Images
+
+Images are placed using the `<img>` tag.
+
+```html
+<img src="img/image-name.jpg" alt="alternative text">
+```
+
+---
+
+# Images
+
+The `img` tag requires a `src` attribute, which tells the browser where to find the image.
+The `src` points to a resource a bit like the `href` of an `<a>` tag.
+
+---
+
+# Images
+
+## How would you write the `src`?
+
+There are different approaches to specifying an image location
+
+---
+
+# Images
+
+Inside webroot, a relative path could be used:
+
+```html
+<img src="images/logo.png">
+```
+
+---
+
+# Images
+
+## Relative path
+
+```html
+<img src="../images/logo.png">
+```
+
+---
+
+#Images
+
+## Absolute Path
+
+```html
+<img src="https://api.peteroftheday.com/random">
+```
+
+---
+
+# Images
+
+`alt` attribute provides a text description of the image
+
+```html
+<img src="https://api.peteroftheday.com/random" alt="A random picture of Peter Martin">
+```
+
+---
+
+# Images
+
+## File Formats
+
+There are four main image file formats:
+
+- `png`
+- `gif`
+- `jpeg || jpg`
+- `svg`
+
+---
+
+# Image
+
+## `png`
+
+- 24­ bit `png` have alpha transparency
+- 8­ bit `png` have transparency but not semi­-transparency
+- Large file­ size due to storing transparency info.
+
+---
+
+# Image
+
+## `gif`
+
+- Can be animated
+- Have basic transparency, like an 8­ bit PNG
+- Used in HTML emails as PNG not widely supported
+
+---
+
+# Image
+
+## `jpeg` || `jpg`
+
+- No transparency
+- Most commonly used for photos
+- Can be compressed to reduce file­size
+
+---
+
+# Image
+
+## `svg`
+
+- Vector based
+- Most commonly used for logos and illustrations
+- Drawn with points and curves
+- Infinitely scalable
 
 ---
 
@@ -144,10 +291,8 @@ class: center, middle
 
 Web browsers apply CSS rules to a document to affect how they are displayed. A CSS rule is formed from:
 
-- A set of properties, which have values set to update how the HTML content is displayed.
-- A selector, which selects the element(s) you want to apply the updated property values to.
-
-A set of CSS rules contained within a stylesheet determines how a webpage should look. You will learn a lot more about what CSS syntax looks like in the next article of the module.
+- **Properties** which have values set to update how the HTML content is displayed.
+- **Selectors** which selects the element(s) you want to apply the updated property values to.
 
 ---
 
@@ -453,3 +598,168 @@ p:nth-child(2) {
   background-color: hsla(240, 100%, 50%, 0.5);
 }
 ```
+
+---
+
+# CSS Fonts
+
+There are numerous things we can style to make text look more interesting and more readable.
+
+---
+
+# Font properties
+
+There are lots of CSS properties for styling text but here are some key ones:
+
+```css
+h1 {
+  font-size: 50px;
+  font-family: 'Avenir', 'Arial', sans-serif;
+  font-weight: bold;
+  font-style: italic;
+  line-height: 1.3;
+}
+```
+
+---
+
+# Font properties
+
+- `font-size` sets the size of the text.
+- `font-family` sets the typeface.
+- `font-weight` sets the boldness (number or keyword)
+- `font-style` can set italic text
+- `line-height` sets the spacing between lines
+
+---
+
+# CSS tricks
+
+## Centring the content
+
+It's very common for a website to have a centered column of content, narrower than the full width of the screen. To achieve this, we wrap a containing element around the content tags that we want to center.
+
+---
+
+# CSS tricks
+
+## Centring the content
+
+A `<div>` tag is ideal for this purpose and is very commonly used to divide up the page into chunks that can be moved around as a single entity.
+
+```html
+<div>
+  <h2>...</h2>
+  <p>...</p>
+  <p>...</p>
+  <blockquote>...</blockquote>
+  <p>...</p>
+</div>
+```
+
+---
+
+# CSS tricks
+
+## Centring the content
+
+To center this div of content, we give it a `width` and set auto on its horizontal margins.
+
+```css
+div {
+  width: 800px; /* could be any number or unit*/
+  margin-left: auto;
+  margin-right: auto;
+}
+```
+
+---
+
+# CSS tricks
+
+## Centring the content
+
+To center text­based content (like paragraphs or headings) we can use the `text-align` property.
+
+```css
+h1 {
+  text-align: center;
+}
+```
+
+---
+
+# CSS
+
+Let's pull all the pieces together
+
+---
+
+# Cookie recipe
+
+## Instructions
+
+1. On your text editor create an HTML file called `index.html`
+2. Generate a html document typing `html` and then press tab key.
+3. Copy the content of the file [content.txt](./content.txt) and paste it inside the body tag
+4. Use semantic HTML to markup the content.
+5. Once your markup is finished create a CSS file and link it to your HTML using a a `<link>` tag
+6. Style as per picture following the below instuctions
+
+---
+
+# Cookie recipe
+
+## CSS
+
+- The background color for the page is `#FFE`
+- The color for the text reading "Related Recipes" is `#887`
+- The link color is `#900`
+- The font family for the h1 is `serif` and the rest is `sans-serif`
+- Bonus: The border on the page and around the image is black
+- The max width of the content is `800px` and should be centered on the page.
+
+---
+
+# Homework
+
+## Fan Fiction CV
+
+Take a movie that you like and create a web page about the CV of one the characters.
+
+Here are some examples
+
+- [Darth Vader](https://www.giraffecvs.co.uk/wp-content/uploads/2013/05/CVDarthVader_rev8-page-001.jpg)
+- [Darth Vader](http://uk.businessinsider.com/what-darth-vaders-resume-would-be-2015-12)
+- [Disney characters](https://ohmy.disney.com/movies/2017/02/27/imaginary-disney-character-resumes/)
+
+---
+
+# Homework
+
+## Technical requirements
+
+- Use HTML5 structural elements (nav, header, footer)
+- Use Elements and Classes to to select and style elements on the page
+- Follow naming conventions, maintain consistency across .html and .css files and use best practices for naming classes
+- Use a unique `title` and a single unique `h1` tag
+- Show images using `img` tags including unique `alt` attributes
+- Use an external CSS stylesheet to style your page
+- Select at least 5 elements on the page and apply at least 5 different css properties (`font-size`, `color`, `font-family`, `background`, `text-decoration`) to these elements
+- Use at least 6 different HTML tags (`h1`, `h2`, `h3`, `blockquote`, `p`, `ul`, `ol`, `a`, `img`) on your pages
+- Indent nested elements to increase your code's readability
+
+## Bonus
+
+- Experiment by adding additional HTML tags and CSS properties we did not cover in class - explore!
+
+---
+
+# Homework
+
+## Submission
+
+- Create a folder uisng the following convention `name-surename-week-1`, e.g `pedro-martin-week-1`
+- Submit your work via Slack (even it's not finished) by Sunday 11:59 PM to the instructors
+
+[Instructions](../homework/instructions.md)

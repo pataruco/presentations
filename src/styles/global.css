@@ -12,6 +12,11 @@ body {
   font-family: var(--sans-serif);
 }
 
+p,
+li {
+  line-height: 1.5;
+}
+
 h1,
 h2,
 h3,
@@ -28,6 +33,6 @@ a {
 img {
   display: block;
   height: auto;
-  max-width: 100%;
+  width: 100%;
   object-fit: contain;
 }
