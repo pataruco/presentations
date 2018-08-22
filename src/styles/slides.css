@@ -24,3 +24,11 @@
   flex-direction: column;
   flex-wrap: wrap;
 }
+
+.remark-inline-code {
+  padding: 0.2em 0.4em;
+  margin: 0;
+  font-size: 85%;
+  background-color: var(--inline-code-grey);
+  border-radius: 3px;
+}

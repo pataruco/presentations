@@ -8,6 +8,7 @@ const lessons = {
   finalPresentations: '../slides/final-presentations/slides.md',
   flexbox: '../slides/flexbox/flexbox.md',
   html: '../slides/intro-html/html.md',
+  htmlCss: '../slides/html-css/html-css.md',
   svg: '../slides/svg/svg.md',
 };
 
@@ -22,6 +23,14 @@ remark.create({
     click: false,
   },
   ratio: '16:9',
-  sourceUrl: lessons.html,
+  sourceUrl: lessons.htmlCss,
   slideNumberFormat: '',
 });
+
+/* 
+FEWD lessons
+
+1 html
+2 htmlCss
+
+*/
