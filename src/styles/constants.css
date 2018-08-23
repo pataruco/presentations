@@ -11,4 +11,5 @@
   --shade-white: rgb(204, 204, 204);
   --shade-black: rgb(86, 86, 86);
   --inline-code-grey: rgba(27, 31, 35, 0.05);
+  --code-hightlight: rgba(68, 78, 88, 0.5);
 }

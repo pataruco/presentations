@@ -759,7 +759,7 @@ Here are some examples
 
 ## Submission
 
-- Create a folder uisng the following convention `name-surename-week-1`, e.g `pedro-martin-week-1`
-- Submit your work via Slack (even it's not finished) by Sunday 11:59 PM to the instructors
+- Create a folder using the following convention `name-surename-week-1`, e.g `pedro-martin-week-1`
+- Submit your work via Slack (even it's not finished) by **Sunday** 11:59 PM to the instructors
 
 [Instructions](../homework/instructions.md)
