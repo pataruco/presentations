@@ -32,3 +32,7 @@
   background-color: var(--inline-code-grey);
   border-radius: 3px;
 }
+
+.remark-code-span-highlighted {
+  background-color: var(--code-hightlight);
+}
