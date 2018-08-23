@@ -5,6 +5,7 @@ import remark from 'exports-loader?remark!remark-slide/out/remark.js';
 
 const lessons = {
   accesability: '../slides/accesability/accesability.md',
+  boxModel: '../slides/box-model/box-model.md',
   finalPresentations: '../slides/final-presentations/slides.md',
   flexbox: '../slides/flexbox/flexbox.md',
   html: '../slides/intro-html/html.md',
@@ -14,7 +15,6 @@ const lessons = {
 
 remark.create({
   count: false,
-  highlightLines: true,
   highlightSpans: true,
   highlightStyle: 'atom-one-dark',
   navigation: {
@@ -23,7 +23,7 @@ remark.create({
     click: false,
   },
   ratio: '16:9',
-  sourceUrl: lessons.htmlCss,
+  sourceUrl: lessons.boxModel,
   slideNumberFormat: '',
 });
 
@@ -32,5 +32,6 @@ FEWD lessons
 
 1 html
 2 htmlCss
+3 boxModel
 
 */
