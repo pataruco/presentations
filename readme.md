@@ -27,12 +27,11 @@ It's a Markdown presentation tool using the new [Webpack server](https://github.
   };
   ```
 - Then on `showSlides` instantiation method, replace `lessons.flexbox` value to the new path
+
   ```js
-  showSlides({
-    sourceUrl: lessons.flexbox,
-    ...
-  };
+  showSlides(lessons.flexbox),
   ```
+
 - To start the server just run
   ```shell
     yarn start
