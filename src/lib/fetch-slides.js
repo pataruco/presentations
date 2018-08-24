@@ -22,7 +22,7 @@ const getSlide = async slide => {
       .then(data => data.data.repository.object.text);
     return data;
   } catch (e) {
-    console.log(e);
+    return console.error(e);
   }
 };
 
