@@ -19,7 +19,6 @@ It's a Markdown presentation tool using the new [Webpack server](https://github.
 
 ## How to run it
 
-- Create a new presentation usin markdown on [`./slides`](./slides) folder
 - On [`./src/index.js`](./src/index.js) add the path of your new presentation to the lesson object
   ```js
   const lessons = {
@@ -27,9 +26,9 @@ It's a Markdown presentation tool using the new [Webpack server](https://github.
     ...
   };
   ```
-- Then on `remark` instantiation method, replace `sourceUrl` value to the new path
+- Then on `showSlides` instantiation method, replace `lessons.flexbox` value to the new path
   ```js
-  remark.create({
+  showSlides({
     sourceUrl: lessons.flexbox,
     ...
   };
