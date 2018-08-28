@@ -1,5 +1,7 @@
 const { GH_TOKEN } = process.env;
 const GH_API = 'https://api.github.com/graphql';
+const REPO = 'fewd-lessons';
+const USER = 'pataruco';
 
 const fetchSettings = {
   method: 'POST',
@@ -10,7 +12,7 @@ const fetchSettings = {
 };
 
 const getQuery = slide => {
-  return `{ repository(name: "fewd-lessons", owner: "pataruco") { object(expression: "master:${slide}") { ... on Blob { text } } }}`;
+  return `{ repository(name: "${REPO}", owner: "${USER}") { object(expression: "master:${slide}") { ... on Blob { text } } }}`;
 };
 
 const getSlide = async slide => {
