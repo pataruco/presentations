@@ -12,7 +12,7 @@ const lessons = {
   flexbox: 'slides/flexbox/flexbox.md',
   html: 'slides/intro-html/html.md',
   htmlCss: 'slides/html-css/html-css.md',
-  positioning: '../slides/positioning/positioning.md',
+  positioning: 'slides/positioning/positioning.md',
   svg: 'slides/svg/svg.md',
 };
 
