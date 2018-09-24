@@ -8,6 +8,12 @@
   max-width: 50%;
 }
 
+.image-third {
+  display: block;
+  margin: 0 auto;
+  max-width: 33.33%;
+}
+
 .table table {
   border: 1px solid;
   border-collapse: collapse;
