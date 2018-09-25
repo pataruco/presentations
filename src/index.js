@@ -13,6 +13,7 @@ const lessons = {
   html: './slides/intro-html/html.md',
   htmlCss: 'slides/html-css/html-css.md',
   positioning: 'slides/positioning/positioning.md',
+  responsive: './slides/responsive/responsive.md',
   svg: 'slides/svg/svg.md',
 };
 
@@ -35,7 +36,7 @@ const showSlides = async lesson => {
   remark.create(slideSettings);
 };
 
-showSlides(lessons.html);
+showSlides(lessons.responsive);
 
 /* 
 FEWD lessons
@@ -47,5 +48,6 @@ FEWD lessons
 5 flexbox
 6 
 8 positioning
+9 responsive
 
 */
