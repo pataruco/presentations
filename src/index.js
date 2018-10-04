@@ -38,6 +38,8 @@ const showSlides = async lesson => {
 
 showSlides(lessons.cssSelectors);
 
+console.log('hola');
+
 /* 
 FEWD lessons
 
