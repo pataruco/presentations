@@ -36,7 +36,7 @@ const showSlides = async lesson => {
   remark.create(slideSettings);
 };
 
-showSlides(lessons.htmlCss);
+showSlides(lessons.cssSelectors);
 
 /* 
 FEWD lessons
