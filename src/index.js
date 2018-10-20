@@ -10,10 +10,11 @@ const lessons = {
   cssSelectors: 'slides/css-selectors/css-selectors.md',
   finalPresentations: 'slides/final-presentations/slides.md',
   flexbox: 'slides/flexbox/flexbox.md',
+  forms: 'slides/forms/forms.md',
   html: 'slides/intro-html/html.md',
   htmlCss: 'slides/html-css/html-css.md',
   positioning: 'slides/positioning/positioning.md',
-  responsive: './slides/responsive/responsive.md',
+  responsive: 'slides/responsive/responsive.md',
   svg: 'slides/svg/svg.md',
 };
 
@@ -36,7 +37,7 @@ const showSlides = async lesson => {
   remark.create(slideSettings);
 };
 
-showSlides(lessons.responsive);
+showSlides(lessons.forms);
 
 /* 
 FEWD lessons
@@ -49,5 +50,7 @@ FEWD lessons
 6 
 8 positioning
 9 responsive
+10 forms
+
 
 */
