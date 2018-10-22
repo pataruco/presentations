@@ -6,6 +6,7 @@ import remark from 'exports-loader?remark!remark-slide/out/remark.js';
 
 const lessons = {
   accesability: 'slides/accesability/accesability.md',
+  animations: './slides/animations/animations.md',
   boxModel: 'slides/box-model/box-model.md',
   cssSelectors: 'slides/css-selectors/css-selectors.md',
   finalPresentations: 'slides/final-presentations/slides.md',
@@ -37,7 +38,7 @@ const showSlides = async lesson => {
   remark.create(slideSettings);
 };
 
-showSlides(lessons.forms);
+showSlides(lessons.animations);
 
 /* 
 FEWD lessons
@@ -51,6 +52,9 @@ FEWD lessons
 8 positioning
 9 responsive
 10 forms
+11 animations
+12 svg
+13 accesability
 
 
 */
