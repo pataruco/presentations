@@ -101,3 +101,7 @@
   background-color: var(--ga-pink);
   color: var(--black);
 }
+
+.bg-white {
+  color: var(--black);
+}
