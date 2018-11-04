@@ -2,6 +2,10 @@
   background: var(--background);
 }
 
+.remark-slide-content {
+  padding: 1em 1.25em;
+}
+
 .remark-slide,
 .remark-slide-content {
   align-items: stretch;
