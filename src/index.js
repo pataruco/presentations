@@ -3,21 +3,7 @@ import 'normalize.css';
 import getSlide from './lib/fetch-slides';
 // Using export-loader to load remark downloaded from NPM
 import remark from 'exports-loader?remark!remark-slide/out/remark.js';
-
-const lessons = {
-  accesability: 'slides/accesability/accesability.md',
-  animations: './slides/animations/animations.md',
-  boxModel: 'slides/box-model/box-model.md',
-  cssSelectors: 'slides/css-selectors/css-selectors.md',
-  finalPresentations: 'slides/final-presentations/slides.md',
-  flexbox: 'slides/flexbox/flexbox.md',
-  forms: 'slides/forms/forms.md',
-  html: 'slides/intro-html/html.md',
-  htmlCss: 'slides/html-css/html-css.md',
-  positioning: 'slides/positioning/positioning.md',
-  responsive: 'slides/responsive/responsive.md',
-  svg: 'slides/svg/svg.md',
-};
+import slides from '../slides';
 
 const slideSettings = {
   count: false,
@@ -38,23 +24,4 @@ const showSlides = async lesson => {
   remark.create(slideSettings);
 };
 
-showSlides(lessons.animations);
-
-/* 
-FEWD lessons
-
-1 html
-2 htmlCss
-3 boxModel
-4 cssSelectors
-5 flexbox
-6 
-8 positioning
-9 responsive
-10 forms
-11 animations
-12 svg
-13 accesability
-
-
-*/
+showSlides(slides.introToCode.introToCode);
