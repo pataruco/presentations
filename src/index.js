@@ -1,5 +1,5 @@
-import './main.css';
 import 'normalize.css';
+import './main.css';
 import getSlide from './lib/fetch-slides';
 // Using export-loader to load remark downloaded from NPM
 import remark from 'exports-loader?remark!remark-slide/out/remark.js';
@@ -24,4 +24,4 @@ const showSlides = async lesson => {
   remark.create(slideSettings);
 };
 
-showSlides(slides.introToCode.introToCode);
+showSlides(slides.fewdLessons.accesability);
