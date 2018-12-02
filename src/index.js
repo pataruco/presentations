@@ -24,4 +24,4 @@ const showSlides = async lesson => {
   remark.create(slideSettings);
 };
 
-showSlides(slides.fewdLessons.accesability);
+showSlides(slides.introToCode.introToCode);
