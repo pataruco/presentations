@@ -1,8 +1,9 @@
-const Dotenv = require('dotenv-webpack');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const path = require('path');
-require('@babel/polyfill');
+import Dotenv from 'dotenv-webpack';
+import HtmlWebpackPlugin from 'html-webpack-plugin';
+import MiniCssExtractPlugin from 'mini-css-extract-plugin';
+import path from 'path';
+// tslint:disable-next-line:no-var-requires
+// require('@babel/polyfill');
 
 module.exports = {
   mode: 'development',
@@ -29,7 +30,7 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: '[name].css',
       chunkFilename: '[name].css',
-      path: path.resolve(__dirname, 'dist'),
+      // path: path.resolve(__dirname, 'dist'),
     }),
     new HtmlWebpackPlugin({
       template: './src/template.html',
