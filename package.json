@@ -43,7 +43,7 @@
     "webpack": "^4.35.0"
   },
   "scripts": {
-    "start": "webpack-dev-server --color --config ./config/webpack.config.dev.ts",
+    "start": "webpack-dev-server --display-error-details --color --config ./config/webpack.config.dev.ts",
     "build": "webpack  --config ./config/webpack.config.prod.js"
   },
   "dependencies": {

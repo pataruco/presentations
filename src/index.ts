@@ -36,12 +36,14 @@ const slideSettings: SlideSettings = {
   slideNumberFormat: '',
 };
 
-// const showSlides = async (lesson: string): Promise<void> => {
-//   const lessonSlides = await getSlide(lesson);
-//   slides
-//     ? (slideSettings.source = lessonSlides)
-//     : (slideSettings.sourceUrl = lesson);
-//   remark.create(slideSettings);
-// };
+const showSlides = async (lesson: string): Promise<void> => {
+  const lessonSlides = await getSlide(lesson);
+  slides
+    ? (slideSettings.source = lessonSlides)
+    : (slideSettings.sourceUrl = lesson);
+  // remark.create(slideSettings);
+};
+
+export { showSlides };
 
 // showSlides(slides.introToCode.introToCode);
