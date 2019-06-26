@@ -1,9 +1,9 @@
 import 'normalize.css';
 import './main.css';
+import slides from '../slides';
 import getSlide from './lib/fetch-slides';
 // Using export-loader to load remark downloaded from NPM
 import remark from 'exports-loader?remark!remark-slide/out/remark.js';
-import slides from '../slides';
 
 // interface SlideSettings {
 //   count: boolean;
