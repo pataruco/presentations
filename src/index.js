@@ -5,6 +5,21 @@ import getSlide from './lib/fetch-slides';
 import remark from 'exports-loader?remark!remark-slide/out/remark.js';
 import slides from '../slides';
 
+// interface SlideSettings {
+//   count: boolean;
+//   highlightSpans: boolean;
+//   highlightStyle: 'atom-one-dark' | string;
+//   navigation: {
+//     scroll: boolean;
+//     touch: boolean;
+//     click: boolean;
+//   };
+//   ratio: string;
+//   slideNumberFormat: string;
+//   source?: string;
+//   sourceUrl?: string;
+// }
+
 const slideSettings = {
   count: false,
   highlightSpans: true,
