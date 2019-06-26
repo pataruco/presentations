@@ -1,4 +1,4 @@
-import Dotenv from 'dotenv-webpack';
+// import Dotenv from 'dotenv-webpack';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import path from 'path';
@@ -10,6 +10,9 @@ const config: webpack.Configuration = {
   mode: 'development',
   entry: [sourceIndex],
   // entry: [sourceIndex, '@babel/polyfill'],
+  resolve: {
+    extensions: ['.ts', '.js', '.json'],
+  },
   module: {
     rules: [
       {
@@ -42,7 +45,7 @@ const config: webpack.Configuration = {
     new HtmlWebpackPlugin({
       template: './src/template.html',
     }),
-    new Dotenv(),
+    // new Dotenv(),
   ],
   output: {
     filename: 'main.js',
