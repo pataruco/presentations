@@ -4,9 +4,12 @@ import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import path from 'path';
 import webpack from 'webpack';
 
+const sourceIndex = path.resolve(__dirname, '../src/index.ts');
+
 const config: webpack.Configuration = {
   mode: 'development',
-  entry: ['@babel/polyfill', './src/index.js'],
+  entry: [sourceIndex],
+  // entry: [sourceIndex, '@babel/polyfill'],
   module: {
     rules: [
       {

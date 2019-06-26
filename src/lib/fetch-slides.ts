@@ -3,7 +3,7 @@ const GH_API = 'https://api.github.com/graphql';
 const REPO = 'fewd-lessons';
 const USER = 'pataruco';
 
-const fetchSettings = {
+const fetchSettings: RequestInit = {
   method: 'POST',
   headers: {
     Authorization: `bearer ${GH_TOKEN}`,
@@ -11,20 +11,22 @@ const fetchSettings = {
   },
 };
 
-const getQuery = slide => {
+const getQuery = (slide: string): string => {
   return `{ repository(name: "${REPO}", owner: "${USER}") { object(expression: "master:${slide}") { ... on Blob { text } } }}`;
 };
 
-const getSlide = async slide => {
+const getSlide = async (slide: string): Promise<string | undefined> => {
   const query = getQuery(slide);
   fetchSettings.body = JSON.stringify({ query });
   try {
-    const data = await fetch(GH_API, fetchSettings)
-      .then(response => response.json())
-      .then(data => data.data.repository.object.text);
-    return data;
+    const response = await fetch(GH_API, fetchSettings);
+    const data = await response.json();
+    return data.data.repository.object.text;
+    // .then(response => response.json())
+    // .then(data => data.data.repository.object.text);
   } catch (e) {
-    return console.error(e);
+    // tslint:disable-next-line:no-console
+    console.error(e);
   }
 };
 
