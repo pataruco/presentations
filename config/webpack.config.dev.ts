@@ -1,4 +1,3 @@
-// import Dotenv from 'dotenv-webpack';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import path from 'path';
@@ -9,7 +8,6 @@ const sourceIndex = path.resolve(__dirname, '../src/index.ts');
 const config: webpack.Configuration = {
   mode: 'development',
   entry: [sourceIndex],
-  // entry: [sourceIndex, '@babel/polyfill'],
   resolve: {
     extensions: ['.ts', '.js', '.json'],
   },
@@ -45,7 +43,6 @@ const config: webpack.Configuration = {
     new HtmlWebpackPlugin({
       template: './src/template.html',
     }),
-    // new Dotenv(),
   ],
   output: {
     filename: 'main.js',
@@ -55,6 +52,9 @@ const config: webpack.Configuration = {
   devServer: {
     open: true,
     port: 3000,
+  },
+  node: {
+    fs: 'empty',
   },
 };
 
