@@ -44,7 +44,7 @@
   },
   "scripts": {
     "start": "webpack-dev-server --display-error-details --color --config ./config/webpack.config.dev.ts",
-    "build": "webpack  --config ./config/webpack.config.prod.js"
+    "build": "webpack  --config ./config/webpack.config.prod.ts"
   },
   "dependencies": {
     "normalize.css": "^8.0.1",
