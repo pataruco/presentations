@@ -43,11 +43,30 @@
     "webpack-dev-server": "^3.7.2"
   },
   "scripts": {
+    "build": "webpack  --config ./config/webpack.config.prod.ts",
     "start": "webpack-dev-server --display-error-details --color --config ./config/webpack.config.dev.ts",
-    "build": "webpack  --config ./config/webpack.config.prod.ts"
+    "lint": "yarn tslint"
   },
   "dependencies": {
     "normalize.css": "^8.0.1",
     "remark-slide": "^0.14.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "linters": {
+      "*.{js,json,yml,md}": [
+        "./node_modules/.bin/prettier --write"
+      ],
+      "*.{ts,ts}": [
+        "yarn lint"
+      ]
+    },
+    "ignore": [
+      "./docs/*.*"
+    ]
   }
 }

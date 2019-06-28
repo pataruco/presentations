@@ -36,10 +36,10 @@ const slideSettings: SlideSettings = {
 
 const showSlides = async (lesson: string): Promise<void> => {
   const lessonSlides = await getSlide(lesson);
-  slides
+  lessonSlides
     ? (slideSettings.source = lessonSlides)
     : (slideSettings.sourceUrl = lesson);
   remark.create(slideSettings);
 };
 
-showSlides(slides.fewdLessons.svg);
+showSlides(slides.fewdLessons.html);

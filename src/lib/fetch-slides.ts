@@ -24,6 +24,9 @@ const getSlide = async (slide: string): Promise<string | null> => {
     const response = await fetch(GH_API, fetchSettings);
     if (response.ok) {
       const data = await response.json();
+      if (!data.data.repository.object) {
+        return null;
+      }
       return data.data.repository.object.text;
     }
     return null;
