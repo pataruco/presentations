@@ -105,3 +105,14 @@
 .bg-white {
   color: var(--black);
 }
+
+.center.middle {
+  align-items: stretch;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 100%;
+  justify-content: flex-start;
+  table-layout: unset;
+  width: 100%;
+}
