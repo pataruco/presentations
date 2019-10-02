@@ -8,12 +8,13 @@ import './main.css';
 
 interface SlideSettings {
   count: boolean;
+  highlightLines?: boolean;
   highlightSpans: boolean;
   highlightStyle: 'atom-one-dark' | string;
   navigation: {
+    click: boolean;
     scroll: boolean;
     touch: boolean;
-    click: boolean;
   };
   ratio: string;
   slideNumberFormat: string;
@@ -23,23 +24,26 @@ interface SlideSettings {
 
 const slideSettings: SlideSettings = {
   count: false,
+  highlightLines: true,
   highlightSpans: true,
   highlightStyle: 'atom-one-dark',
   navigation: {
+    click: false,
     scroll: false,
     touch: true,
-    click: false,
   },
-  ratio: '16:9',
+  ratio: '64:35', // browser aspect ratio
   slideNumberFormat: '',
 };
 
-const showSlides = async (lesson: string): Promise<void> => {
-  const lessonSlides = await getSlide(lesson);
-  lessonSlides
-    ? (slideSettings.source = lessonSlides)
-    : (slideSettings.sourceUrl = lesson);
+const showSlidesLocally = async (
+  lesson: string,
+  local: boolean = false,
+): Promise<void> => {
+  local
+    ? (slideSettings.sourceUrl = `./slides/${lesson}`)
+    : (slideSettings.source = await getSlide(lesson));
   remark.create(slideSettings);
 };
 
-showSlides(slides.fewdLessons.html);
+showSlidesLocally(slides.fewdLessons.html, true);

@@ -23,6 +23,7 @@ h3,
 h4,
 h5 {
   font-family: var(--ga-serif);
+  margin-top: 0;
 }
 
 a {
