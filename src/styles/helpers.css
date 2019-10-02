@@ -112,8 +112,15 @@
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: flex-start;
+  height: 100%;
 }
 
 .center.middle > * {
   flex: 1 1 auto;
+}
+
+.logo {
+  display: block;
+  max-width: 33%;
+  margin: 0 auto;
 }
