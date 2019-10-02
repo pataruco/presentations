@@ -2,6 +2,10 @@
   background: var(--white);
 }
 
+.remark-slide-scaler {
+  background-color: #fff;
+}
+
 .remark-slide-content {
   padding: 1em;
 }

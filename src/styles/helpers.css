@@ -113,3 +113,7 @@
   flex-wrap: wrap;
   justify-content: flex-start;
 }
+
+.center.middle > * {
+  flex: 1 1 auto;
+}
