@@ -9,7 +9,7 @@ html {
 }
 
 body {
-  font-family: var(--ga-sans-serif);
+  font-family: var(--ga-serif);
 }
 
 p,
@@ -22,7 +22,8 @@ h2,
 h3,
 h4,
 h5 {
-  font-family: var(--ga-serif);
+  font-family: var(--ga-sans-serif);
+  text-transform: uppercase;
   margin-top: 0;
 }
 
