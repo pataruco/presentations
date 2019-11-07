@@ -63,14 +63,19 @@
 }
 
 .fullscreen {
+  align-content: center;
+  bottom: 0;
+  color: var(--white);
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-content: center;
-  color: var(--white);
-  text-transform: uppercase;
-  text-align: center;
   flex-wrap: nowrap;
+  justify-content: center;
+  left: 0;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  text-transform: uppercase;
+  top: 0;
 }
 
 .bg-red {

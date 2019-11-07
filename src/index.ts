@@ -46,4 +46,4 @@ const showSlidesLocally = async (
   remark.create(slideSettings);
 };
 
-showSlidesLocally(slides.fewdLessons.html, true);
+showSlidesLocally(slides.introToCode.introToCode, true);
