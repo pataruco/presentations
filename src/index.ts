@@ -32,7 +32,8 @@ const slideSettings: SlideSettings = {
     scroll: false,
     touch: true,
   },
-  ratio: '64:35', // browser aspect ratio
+  ratio: '16:9',
+  // ratio: '64:35', // browser aspect ratio
   slideNumberFormat: '',
 };
 
@@ -46,4 +47,4 @@ const showSlidesLocally = async (
   remark.create(slideSettings);
 };
 
-showSlidesLocally(slides.introToCode.introToCode, true);
+showSlidesLocally(slides.uxdi.oneDayWorlshopMorning, true);
