@@ -1,6 +1,6 @@
 // Using export-loader to load remark downloaded from NPM
 // @ts-ignore
-import remark from 'exports-loader?remark!remark-slide/out/remark.js';
+import remark from 'exports-loader?remark!remark/src/remark.js';
 import 'normalize.css';
 import slides from '../slides';
 import getSlide from './lib/fetch-slides';
