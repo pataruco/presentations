@@ -47,4 +47,4 @@ const showSlidesLocally = async (
   remark.create(slideSettings);
 };
 
-showSlidesLocally(slides.uxdi.oneDayWorlshopMorning, true);
+showSlidesLocally(slides.uxdi.oneDayWorlshopAfternoon, true);
