@@ -44,7 +44,7 @@
   },
   "dependencies": {
     "normalize.css": "^8.0.1",
-    "remark-slide": "^0.14.0"
+    "remark": "./src/lib/remark-0.15.0.tar.gz"
   },
   "husky": {
     "hooks": {
