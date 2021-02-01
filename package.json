@@ -15,7 +15,7 @@
     "@types/webpack": "^4.4.34",
     "convict": "^6.0.0",
     "css-loader": "^3.0.0",
-    "exports-loader": "^0.7.0",
+    "exports-loader": "^2.0.0",
     "favicons-webpack-plugin": "^0.0.9",
     "html-webpack-plugin": "^4.5.1",
     "husky": "^2.6.0",
